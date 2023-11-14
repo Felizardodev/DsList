@@ -1,7 +1,7 @@
 # DsList
 Projeto Dslist
 
-## *Conceitos
+## Conceitos
 * Sistemas web e recursos
 * Cliente/servidor, HTTP, JSON
 * Padrão Rest para API web
