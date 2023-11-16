@@ -1,5 +1,6 @@
 package com.felizardodev.dslist.Controllers;
 
+import com.felizardodev.dslist.Dto.GameDTO;
 import com.felizardodev.dslist.Dto.GameMinDTO;
 import com.felizardodev.dslist.Services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,13 @@ public class GameController {
 
     @Autowired
     private GameService gameService;
+
+    @GetMapping(value = "/{id}")
+    public GameDTO findById(@PathVariable Long id){
+        GameDTO result = gameService.findById(id);
+        return result;
+    }
+
     @GetMapping
     public List<GameMinDTO> findAll(){
         List<GameMinDTO> result = gameService.findALL();
