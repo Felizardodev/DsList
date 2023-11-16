@@ -1,6 +1,7 @@
 package com.felizardodev.dslist.Dto;
 
 import com.felizardodev.dslist.Entities.Game;
+import com.felizardodev.dslist.GameMinProjection;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,5 +25,12 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+    public GameMinDTO(GameMinProjection project) {
+        id = project.getId();
+        title = project.getTitle();
+        year = project.getYear();
+        imgUrl = project.getImgUrl();
+        shortDescription = project.getShortDescription();
     }
 }
