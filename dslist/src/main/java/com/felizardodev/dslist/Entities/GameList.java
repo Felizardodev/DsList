@@ -28,8 +28,8 @@ public class GameList {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GameList gameList = (GameList) o;
-        return Objects.equals(id, gameList.id);
+        GameList other = (GameList) o;
+        return Objects.equals(id, other.id);
     }
 
     @Override

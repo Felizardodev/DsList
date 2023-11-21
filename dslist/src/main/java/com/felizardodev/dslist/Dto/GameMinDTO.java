@@ -4,13 +4,12 @@ import com.felizardodev.dslist.Entities.Game;
 import com.felizardodev.dslist.GameMinProjection;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public class GameMinDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /*@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
     private Long id;
     private String title;
     private Integer year;
@@ -26,11 +25,11 @@ public class GameMinDTO {
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
     }
-    public GameMinDTO(GameMinProjection project) {
-        id = project.getId();
-        title = project.getTitle();
-        year = project.getYear();
-        imgUrl = project.getImgUrl();
-        shortDescription = project.getShortDescription();
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getGameYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 }

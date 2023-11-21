@@ -19,6 +19,9 @@ public class Belonging {
 
     private Integer position;
 
+    public void setGame(Game game) {
+        id.setGame(game);
+    }
     public Belonging(){
     }
 
