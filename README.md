@@ -1,6 +1,6 @@
 # DsList
 Projeto Dslist
-
+Lista de games com informações detalhadas sobre cada + serviço para mudança de posição manual na lista.
 ## Conceitos
 * Sistemas web e recursos
 * Cliente/servidor, HTTP, JSON
